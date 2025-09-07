@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience</title>
+    <link rel="stylesheet" href="exp.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+    <nav class="container">
+        <a href="#" class="logo">🎤HELLO, કેમ છો?</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+            <button class="nav-button" id="about-btn">ABOUT</button>
+            <button class="nav-button" id="work-btn">GALLERY</button>
+            <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+            <button class="nav-button" id="contact-btn">CONTACT</button>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="container">
+      <section id="internships" class="section">
+        <h1 class="section-heading">EXPERIENCE</h1>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <!-- <div class="job-header">
+              <h2 class="job-title">Collabera Digital, Vadodara</h2>
+              <span class="job-type">Jan 2024 - Apr 2024</span>
+            </div> -->
+            <p class="job-description">
+              <br />
+              <p>With over 8+ years in the radio industry, I've established myself as a dynamic Radio Jockey and a versatile event host. My journey encompasses:</p>
+                   <br>
+              <ul>
+                        <li><span class="exp"> 500+ Events Hosted: </span> Sangeet, Haldi, Engagement, Birthday Parties, anniversary and corporate Events etc.</li>
+                        <li><span class="exp"> Celebrity Interactions:</span>  Exclusive interviews with renowned personalities like Virat Kohli, Ranveer Singh, Alia Bhatt, Varun Dhawan, Shraddha Kapoor, Himesh reshammiya, Gulshan Grover, Annu Kapoor, Paresh Raval, Nawazuddin siddiqui and many more.</li>
+                        <li><span class="exp"> Corporate Collaborations: </span> Successfully hosted events for esteemed brands such as Hyatt, Tara Suns, Sayaji, and led product launches for Maruti Suzuki.</li>
+                        <li><span class="exp"> Government and Brand Engagements:</span>  Conducted impactful Instagram reel shoots and Lives for the Gujarat Government, Suzuki, JEEP, and Jagdish Foods, etc.</li>
+                        <li><span class="exp"> Festive and Corporate Celebrations: </span> Brought energy to numerous corporate events, including Diwali celebrations for builders, doctors, Real estate and IT companies etc.</li>
+                    </ul>
+                    <br>
+            <p>My forte lies in to hold audiences with spontaneous humor and a commanding stage presence, ensuring every event is memorable and engaging.</p>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Utkarsh Kaushal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+     document.getElementById("about-btn").addEventListener('click', () => { window.location.href = 'Index.html'; });
+    document.getElementById("work-btn").addEventListener('click', () => { window.location.href = 'photos.html'; }); 
+    document.getElementById("experience-btn").addEventListener('click', () => { window.location.href = 'exp.html'; });
+    document.getElementById("contact-btn").addEventListener('click', () => { window.location.href = 'contact.html'; });
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

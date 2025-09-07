@@ -1,0 +1,404 @@
+:root {
+  /* New Color Palette */
+  --light-bg: #F2F0EF;
+  --gray: #BBBDBC;
+  --dark-blue: #245F73;
+  --dark-brown: #733E24;
+  
+}
+
+body {
+  /* background-color: var(--light-bg); */
+  background-color: #FFF8DC;
+  /* color: var(--dark-blue); */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: none; /* Removing the old gradient/pattern background */
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Header & Navigation */
+header {
+  background: rgba(242, 240, 239, 0.9); /* A slightly transparent version of the light background */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+  text-decoration: none;
+  /* Removed text-shadow and animation for a cleaner look */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--dark-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: var(--dark-blue);
+  transform: translateY(-3px);
+  color: var(--light-bg);
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem 3rem 5rem;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+/* 'On Air' indicator */
+#hero::before {
+  content: 'ON AIR';
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dark-brown);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  animation: none; /* Removed the blink animation for a calmer feel */
+  box-shadow: 0 0 10px rgba(115, 62, 36, 0.5); /* A subtle shadow */
+  z-index: 10;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+.highlight {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: var(--dark-brown);
+  text-shadow: none;
+}
+
+.hero-content h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  text-shadow: none;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  color: var(--dark-blue);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--gray);
+  box-shadow: 0 0 20px rgba(36, 95, 115, 0.3); /* Subtle blue shadow */
+  animation: none; /* Removed the pulse animation */
+}
+
+/* Soundwave and Microphone Graphics */
+.hero-image::after {
+  display: none; /* Removed the SVG background graphic for a cleaner look */
+}
+
+/* About Section */
+#about {
+  padding: 5rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--dark-brown);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+.about-content p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--dark-blue);
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.skill-group {
+  background-color: var(--gray);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-group:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--dark-brown);
+}
+
+.skill-group h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-brown);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.skill-group li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: var(--dark-blue);
+}
+
+/* Icons */
+.skill-group li::before {
+  content: '🎙️';
+  margin-right: 10px;
+}
+
+/* QR Code Section */
+.qr-code-section {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.qr-code-section h4 {
+  color: var(--dark-brown);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  font-size: 1.5rem;
+}
+
+.qr-code-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: var(--gray);
+  /* border: 2px dashed rgba(0, 0, 0, 0.3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-placeholder p img{
+  /* color: #333; */
+  /* font-size: 0.9rem; */
+  width: 105%;
+  margin-top: 30%;
+}
+
+/* Contact Button */
+.contact-button {
+  display: inline-block;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  border-radius: 50px;
+  background-color: var(--dark-blue);
+  color: var(--light-bg);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+
+.hamburger-menu {
+    display: none; /* Hide on desktop */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--dark-brown);
+    cursor: pointer;
+}
+/* Removed Keyframe Animations */
+/* Removed the keyframe animation sections as they are no longer used. */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.5rem;
+  }
+    /* nav {
+
+        gap: 1rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+    } */
+
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.2rem;
+    }
+    .hamburger-menu {
+        display: block; 
+    }
+    
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    width: 300px; 
+    background-color: #ffffff;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-button {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+    /* .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex; 
+    }
+     .nav-button {
+        padding: 1rem;
+        width: 100%;
+        text-align: center; 
+        border-bottom: 1px solid #eee;
+    }*/
+}

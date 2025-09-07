@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar's Portfolio | The Voice</title>
+    <link rel="stylesheet" href="jiju.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+    <nav class="container">
+        <a href="#" class="logo">🎤HELLO, કેમ છો?</a>
+        <button class="hamburger-menu">☰</button>
+        <div class="nav-links">
+            <button class="nav-button" id="about-btn">ABOUT</button>
+            <button class="nav-button" id="work-btn">GALLERY</button>
+            <button class="nav-button" id="experience-btn">EXPERIENCE</button>
+            <button class="nav-button" id="contact-btn">CONTACT</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <h1>I'm <span class="highlight">RJ Tushar</span></h1>
+            <h3>Your Host, Your Voice, Your Vibe</h3>
+            <p>I bring energy and charm to every stage, from the radio waves to live events. Let's make some noise! <p style="color: rgb(179, 6, 6);"> "Spread humor, not rumors"</p></p>
+            <p></p>
+        </div>
+        <div class="hero-image">
+            <img src="rockStar.jpeg" alt="Ankit - RJ & Anchor">
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>A professional Wedding Emcee, Corporate Anchor, and Radio Jockey with 8+ years of experience and have successfully hosted more than 500+ events across India. Only RJ who met "Virat Kohli". I host destination weddings, sangeet nights, haldi & mehndi functions, corporate events, product launches, Celebrity Events, and award ceremonies. Known for my energy, humor, and engaging stage presence in Hindi, Gujarati, English and Marwadi</p>
+            <div class="skills">
+                <div class="skill-group">
+                    <h4>My Vibe</h4>
+                    <ul>
+                        <li>🎙️ Hosting & RJing</li>
+                        <li>🎤 Event Emcee</li>
+                        <li>🗣️ Voiceovers & Dubbing</li>
+                        <li>✍️ Creative Scripting</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Key Skills</h4>
+                    <ul>
+                        <li>Audience Engagement</li>
+                        <li>Content Creator</li>
+                        <li>Live Broadcasting</li>
+                        <li>Celebrity Conference</li>
+                        <li>Energetic Delivery</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>On the Side</h4>
+                    <ul>
+                        <li>🎤 Humorous</li>
+                        <li>🎮 Game Jockey</li>
+                        <li>📚 Storytelling</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="objectives">
+                <div class="qr-code-section">
+                    <!-- <h4>Scan for My Contact Info</h4> -->
+                    <div class="qr-code-placeholder">
+                        <p><img src="scan2.jpeg" alt=""></p>
+                         
+                    </div>
+                </div>
+                <a href="contact.html" class="contact-button">Let's Connect!</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 RJ Tushar. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Assuming you have separate pages for these sections, the links remain.
+    document.getElementById("about-btn").addEventListener('click', () => { window.location.href = 'Index.html'; });
+    document.getElementById("work-btn").addEventListener('click', () => { window.location.href = 'photos.html'; }); 
+    document.getElementById("experience-btn").addEventListener('click', () => { window.location.href = 'exp.html'; });
+    document.getElementById("contact-btn").addEventListener('click', () => { window.location.href = 'contact.html'; });
+
+    const hamburger = document.querySelector(".hamburger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        // Close the menu if the user clicks outside of it
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        }
+      });
+</script>
+</body>
+</html>
